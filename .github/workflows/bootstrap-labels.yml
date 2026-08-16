@@ -1,0 +1,26 @@
+name: Bootstrap Jingu Community labels
+on:
+  workflow_dispatch:
+permissions:
+  issues: write
+  contents: read
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v8
+        with:
+          script: |
+            const labels = [
+              ['jingu-community-request','6f42c1','Solicitação de entrada no catálogo Comunidade'],
+              ['pending','d4c5f9','Aguardando análise'],
+              ['approved','2da44e','Solicitação aprovada'],
+              ['rejected','cf222e','Solicitação rejeitada']
+            ];
+            for (const [name,color,description] of labels) {
+              try { await github.rest.issues.getLabel({...context.repo,name}); }
+              catch (e) {
+                if (e.status !== 404) throw e;
+                await github.rest.issues.createLabel({...context.repo,name,color,description});
+              }
+            }
