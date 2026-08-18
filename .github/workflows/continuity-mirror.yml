@@ -1,0 +1,31 @@
+name: Mirror public Communities to Jingu Continuity
+
+on:
+  push:
+    branches: [main]
+    paths: [communities.json]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Validate and mirror
+        env:
+          CONTINUITY_URL: ${{ vars.JINGU_CONTINUITY_URL }}
+          INGEST_KEY: ${{ secrets.JINGU_CONTINUITY_INGEST_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$CONTINUITY_URL"
+          test -n "$INGEST_KEY"
+          python -m json.tool communities.json >/dev/null
+          curl --fail-with-body --silent --show-error \
+            --retry 3 --retry-all-errors \
+            -X PUT "${CONTINUITY_URL%/}/v1/admin/snapshots/communities" \
+            -H 'Content-Type: application/json' \
+            -H "X-Jingu-Ingest-Key: $INGEST_KEY" \
+            --data-binary @communities.json
