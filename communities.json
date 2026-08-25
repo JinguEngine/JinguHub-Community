@@ -1,21 +1,25 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-16",
+  "updated_at": "2026-08-25",
   "communities": [
     {
       "id": "piauindie",
+      "created_at": "2026-08-25T01:51:51.193505100+00:00",
       "name": "PiauIndie",
       "region": "Piauí",
+      "country": "Brasil",
       "description": "Comunidade de desenvolvedores de jogos do Piauí, voltada a networking, troca de conhecimento, eventos e game jams.",
       "tags": [
         "Piauí",
         "GameDev",
         "Game Jam",
-        "Networking"
+        "Networking",
+        "Recomendado",
+        "Apoiador"
       ],
       "links": [
         {
-          "label": "Links oficiais",
+          "label": "Site",
           "kind": "site",
           "url": "https://linktr.ee/piauindie"
         },
@@ -34,13 +38,14 @@
           "kind": "instagram",
           "url": "https://www.instagram.com/piauindie/"
         }
-      ],
-      "country": "Brasil"
+      ]
     },
     {
       "id": "amagames",
+      "created_at": "",
       "name": "AMAGAMES",
       "region": "Maranhão",
+      "country": "Brasil",
       "description": "Associação Maranhense de Desenvolvedores de Jogos Eletrônicos, com ações de capacitação, eventos, divulgação e fortalecimento do ecossistema local.",
       "tags": [
         "Maranhão",
@@ -69,13 +74,14 @@
           "kind": "discord",
           "url": "https://www.amagames.com.br/discord/"
         }
-      ],
-      "country": "Brasil"
+      ]
     },
     {
       "id": "gamedevspa",
+      "created_at": "",
       "name": "GameDevsPA",
       "region": "Pará",
+      "country": "Brasil",
       "description": "Comunidade independente de desenvolvedores de games do Pará, criada para conectar pessoas interessadas em criação de jogos digitais.",
       "tags": [
         "Pará",
@@ -88,13 +94,14 @@
           "kind": "instagram",
           "url": "https://www.instagram.com/gamedevspa/"
         }
-      ],
-      "country": "Brasil"
+      ]
     },
     {
       "id": "pong-rn",
+      "created_at": "",
       "name": "PONG — Potiguar Indie Games",
       "region": "Rio Grande do Norte",
+      "country": "Brasil",
       "description": "Grupo de desenvolvedores de jogos do Rio Grande do Norte que promove encontros, divulgação, testes de jogos e fortalecimento do cenário regional.",
       "tags": [
         "Rio Grande do Norte",
@@ -113,8 +120,7 @@
           "kind": "instagram",
           "url": "https://www.instagram.com/pong.rn/"
         }
-      ],
-      "country": "Brasil"
+      ]
     }
   ]
 }
