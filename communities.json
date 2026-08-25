@@ -7,13 +7,114 @@
       "name": "PiauIndie",
       "region": "Piauí",
       "description": "Comunidade de desenvolvedores de jogos do Piauí, voltada a networking, troca de conhecimento, eventos e game jams.",
-      "tags": ["Piauí", "GameDev", "Game Jam", "Networking"],
+      "tags": [
+        "Piauí",
+        "GameDev",
+        "Game Jam",
+        "Networking"
+      ],
       "links": [
-        {"label": "Links oficiais", "kind": "site", "url": "https://linktr.ee/piauindie"},
-        {"label": "WhatsApp", "kind": "whatsapp", "url": "https://chat.whatsapp.com/FgZDYhQwPJMERF1mp2utbd"},
-        {"label": "Discord", "kind": "discord", "url": "https://discord.gg/k99tVTx"},
-        {"label": "Instagram", "kind": "instagram", "url": "https://www.instagram.com/piauindie/"}
-      ]
+        {
+          "label": "Links oficiais",
+          "kind": "site",
+          "url": "https://linktr.ee/piauindie"
+        },
+        {
+          "label": "WhatsApp",
+          "kind": "whatsapp",
+          "url": "https://chat.whatsapp.com/FgZDYhQwPJMERF1mp2utbd"
+        },
+        {
+          "label": "Discord",
+          "kind": "discord",
+          "url": "https://discord.gg/k99tVTx"
+        },
+        {
+          "label": "Instagram",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/piauindie/"
+        }
+      ],
+      "country": "Brasil"
+    },
+    {
+      "id": "amagames",
+      "name": "AMAGAMES",
+      "region": "Maranhão",
+      "description": "Associação Maranhense de Desenvolvedores de Jogos Eletrônicos, com ações de capacitação, eventos, divulgação e fortalecimento do ecossistema local.",
+      "tags": [
+        "Maranhão",
+        "GameDev",
+        "Eventos",
+        "Networking"
+      ],
+      "links": [
+        {
+          "label": "Site",
+          "kind": "site",
+          "url": "https://www.amagames.com.br/"
+        },
+        {
+          "label": "Links oficiais",
+          "kind": "site",
+          "url": "https://linktr.ee/amagames"
+        },
+        {
+          "label": "WhatsApp",
+          "kind": "whatsapp",
+          "url": "https://chat.whatsapp.com/HZKHwjp9LGcF4uceFf15aS"
+        },
+        {
+          "label": "Discord",
+          "kind": "discord",
+          "url": "https://www.amagames.com.br/discord/"
+        }
+      ],
+      "country": "Brasil"
+    },
+    {
+      "id": "gamedevspa",
+      "name": "GameDevsPA",
+      "region": "Pará",
+      "description": "Comunidade independente de desenvolvedores de games do Pará, criada para conectar pessoas interessadas em criação de jogos digitais.",
+      "tags": [
+        "Pará",
+        "GameDev",
+        "Networking"
+      ],
+      "links": [
+        {
+          "label": "Instagram",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/gamedevspa/"
+        }
+      ],
+      "country": "Brasil"
+    },
+    {
+      "id": "pong-rn",
+      "name": "PONG — Potiguar Indie Games",
+      "region": "Rio Grande do Norte",
+      "description": "Grupo de desenvolvedores de jogos do Rio Grande do Norte que promove encontros, divulgação, testes de jogos e fortalecimento do cenário regional.",
+      "tags": [
+        "Rio Grande do Norte",
+        "GameDev",
+        "Indie",
+        "Networking"
+      ],
+      "links": [
+        {
+          "label": "Site",
+          "kind": "site",
+          "url": "https://www.pongrn.com.br/"
+        },
+        {
+          "label": "Instagram",
+          "kind": "instagram",
+          "url": "https://www.instagram.com/pong.rn/"
+        }
+      ],
+      "country": "Brasil"
     }
   ]
 }
