@@ -18,31 +18,6 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  mirror:
-    permissions:
-      contents: read
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8
-        with:
-          persist-credentials: false
-      - name: Build canonical compatibility projection
-        run: node scripts/build-community-snapshot.cjs communities.json communities-snapshot.json
-      - name: Mirror canonical snapshot
-        env:
-          CONTINUITY_URL: ${{ vars.JINGU_CONTINUITY_URL }}
-          INGEST_KEY: ${{ secrets.JINGU_CONTINUITY_INGEST_KEY }}
-        run: |
-          set -euo pipefail
-          test -n "$CONTINUITY_URL"
-          test -n "$INGEST_KEY"
-          curl --fail-with-body --silent --show-error \
-            --retry 3 --retry-all-errors \
-            -X PUT "${CONTINUITY_URL%/}/v1/admin/snapshots/communities" \
-            -H 'Content-Type: application/json' \
-            -H "X-Jingu-Ingest-Key: $INGEST_KEY" \
-            --data-binary @communities-snapshot.json
-
   migrate-legacy-source:
     permissions:
       contents: write
@@ -77,3 +52,24 @@ jobs:
             -f content="$encoded" \
             -f sha="$current_sha" \
             -f branch="$GITHUB_REF_NAME" >/dev/null
+      - name: Promote migrated source for this same mirror run
+        if: steps.migration.outputs.needed == 'true'
+        shell: bash
+        run: cp communities-upgraded.json communities.json
+      - name: Build canonical compatibility projection
+        run: node scripts/build-community-snapshot.cjs communities.json communities-snapshot.json
+      - name: Mirror canonical snapshot
+        env:
+          CONTINUITY_URL: ${{ vars.JINGU_CONTINUITY_URL }}
+          INGEST_KEY: ${{ secrets.JINGU_CONTINUITY_INGEST_KEY }}
+        run: |
+          set -euo pipefail
+          test -n "$CONTINUITY_URL"
+          test -n "$INGEST_KEY"
+          curl --fail-with-body --silent --show-error \
+            --retry 3 --retry-all-errors \
+            --connect-timeout 3 --max-time 15 \
+            -X PUT "${CONTINUITY_URL%/}/v1/admin/snapshots/communities" \
+            -H 'Content-Type: application/json' \
+            -H "X-Jingu-Ingest-Key: $INGEST_KEY" \
+            --data-binary @communities-snapshot.json
