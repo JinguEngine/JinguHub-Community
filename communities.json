@@ -39,32 +39,6 @@
           "url": "https://www.instagram.com/piauindie/"
         }
       ]
-    },
-    {
-      "id": "pong-rn",
-      "created_at": "",
-      "name": "PONG — Potiguar Indie Games",
-      "region": "Rio Grande do Norte",
-      "country": "Brasil",
-      "description": "Grupo de desenvolvedores de jogos do Rio Grande do Norte que promove encontros, divulgação, testes de jogos e fortalecimento do cenário regional.",
-      "tags": [
-        "Rio Grande do Norte",
-        "GameDev",
-        "Indie",
-        "Networking"
-      ],
-      "links": [
-        {
-          "label": "Site",
-          "kind": "site",
-          "url": "https://www.pongrn.com.br/"
-        },
-        {
-          "label": "Instagram",
-          "kind": "instagram",
-          "url": "https://www.instagram.com/pong.rn/"
-        }
-      ]
     }
   ]
 }
