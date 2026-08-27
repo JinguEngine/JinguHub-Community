@@ -4,7 +4,7 @@
   "communities": [
     {
       "id": "piauindie",
-      "created_at": "",
+      "created_at": "2026-08-27T20:53:17.224990900+00:00",
       "name": "PiauIndie",
       "region": "Piauí",
       "country": "Brasil",
@@ -13,11 +13,13 @@
         "Piauí",
         "GameDev",
         "Game Jam",
-        "Networking"
+        "Networking",
+        "Recomendado",
+        "Apoiador"
       ],
       "links": [
         {
-          "label": "Links oficiais",
+          "label": "Site",
           "kind": "site",
           "url": "https://linktr.ee/piauindie"
         },
