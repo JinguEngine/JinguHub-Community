@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-26",
+  "updated_at": "2026-08-27",
   "communities": [
     {
       "id": "piauindie",
@@ -15,7 +15,8 @@
         "Game Jam",
         "Networking",
         "Apoiador",
-        "Recomendado"
+        "Recomendado",
+        "Patrocinador"
       ],
       "links": [
         {
