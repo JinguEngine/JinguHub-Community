@@ -41,26 +41,6 @@
       ]
     },
     {
-      "id": "gamedevspa",
-      "created_at": "",
-      "name": "GameDevsPA",
-      "region": "Pará",
-      "country": "Brasil",
-      "description": "Comunidade independente de desenvolvedores de games do Pará, criada para conectar pessoas interessadas em criação de jogos digitais.",
-      "tags": [
-        "Pará",
-        "GameDev",
-        "Networking"
-      ],
-      "links": [
-        {
-          "label": "Instagram",
-          "kind": "instagram",
-          "url": "https://www.instagram.com/gamedevspa/"
-        }
-      ]
-    },
-    {
       "id": "pong-rn",
       "created_at": "",
       "name": "PONG — Potiguar Indie Games",
