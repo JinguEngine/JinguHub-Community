@@ -1,21 +1,25 @@
 {
   "schema": 1,
-  "updated_at": "2026-08-16",
+  "updated_at": "2026-08-31",
   "communities": [
     {
       "id": "piauindie",
+      "created_at": "2026-08-31T18:24:17.280335200+00:00",
       "name": "PiauIndie",
       "region": "Piauí",
+      "country": "Brasil",
       "description": "Comunidade de desenvolvedores de jogos do Piauí, voltada a networking, troca de conhecimento, eventos e game jams.",
       "tags": [
         "Piauí",
         "GameDev",
         "Game Jam",
-        "Networking"
+        "Networking",
+        "Recomendado",
+        "Apoiador"
       ],
       "links": [
         {
-          "label": "Links oficiais",
+          "label": "Site",
           "kind": "site",
           "url": "https://linktr.ee/piauindie"
         },
@@ -34,8 +38,7 @@
           "kind": "instagram",
           "url": "https://www.instagram.com/piauindie/"
         }
-      ],
-      "country": "Brasil"
+      ]
     }
   ]
 }
